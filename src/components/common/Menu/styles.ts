@@ -3,14 +3,14 @@ import { theme } from '../../../global/styles/theme'
 
 export const styles = StyleSheet.create({
   menuContainer: {
-    width: 250,
+    width: 220,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     position: 'absolute',
-    backgroundColor: theme.colors.rock,
-    bottom: 30,
+    backgroundColor: theme.colors.dark,
+    bottom: 20,
     borderRadius: 50,
     paddingVertical: 8,
     paddingHorizontal: 16
@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 50,
-    backgroundColor: 'transparent'
+    borderRadius: 50
+    // backgroundColor: theme.colors.splash
   }
 })

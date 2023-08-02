@@ -1,6 +1,6 @@
 import { View, Pressable } from 'react-native'
 import { generateId } from '../../../utils/generateId'
-import { MaterialIcons, AntDesign, Ionicons } from '@expo/vector-icons'
+import { MaterialIcons, AntDesign, Feather } from '@expo/vector-icons'
 
 import { styles } from './styles'
 import { theme } from '../../../global/styles/theme'
@@ -10,19 +10,19 @@ export const Menu = () => {
     {
       route: '',
       icon: (
-        <MaterialIcons name="storefront" size={25} color={theme.colors.light} />
+        <MaterialIcons name="storefront" size={20} color={theme.colors.light} />
       )
     },
     {
       route: '',
-      icon: <AntDesign name="search1" size={25} color={theme.colors.light} />
+      icon: <AntDesign name="search1" size={20} color={theme.colors.light} />
     },
     {
       route: '',
       icon: (
         <MaterialIcons
           name="favorite-border"
-          size={25}
+          size={20}
           color={theme.colors.light}
         />
       )
@@ -30,11 +30,7 @@ export const Menu = () => {
     {
       route: '',
       icon: (
-        <Ionicons
-          name="md-person-outline"
-          size={25}
-          color={theme.colors.light}
-        />
+        <Feather name="shopping-cart" size={20} color={theme.colors.light} />
       )
     }
   ]
