@@ -6,7 +6,7 @@ import { styles } from './styles'
 import { theme } from '../../../global/styles/theme'
 
 export const Menu = () => {
-  const menuOption = [
+  const menuOptions = [
     {
       route: '',
       icon: (
@@ -37,7 +37,7 @@ export const Menu = () => {
 
   return (
     <View style={styles.menuContainer}>
-      {menuOption.map(({ route, icon }) => (
+      {menuOptions.map(({ route, icon }) => (
         <Pressable style={styles.menuButton} key={generateId(route)}>
           {icon}
         </Pressable>

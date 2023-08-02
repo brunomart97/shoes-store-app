@@ -8,8 +8,9 @@ import {
   Poppins_600SemiBold,
   Poppins_700Bold
 } from '@expo-google-fonts/poppins'
-import { StyleSheet, Text, View } from 'react-native'
+import { View } from 'react-native'
 import { Menu } from './src/components/common/Menu'
+import { Onboarding } from './src/screens/Onboarding'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,19 +23,10 @@ export default function App() {
   })
 
   return (
-    <View style={styles.container}>
+    <View>
       <StatusBar style="auto" />
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <Menu />
+      {/* <Menu /> */}
+      <Onboarding />
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
