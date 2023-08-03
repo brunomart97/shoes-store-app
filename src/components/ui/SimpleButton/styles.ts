@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
   },
   simpleButtonFilled: {
     display: 'flex',
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: 8,

@@ -1,24 +1,32 @@
+import { useState, useMemo } from 'react'
 import { View } from 'react-native'
 import { OnboardingBox } from '../../components/sections/OnboardingBox'
-import ecommerceOnboarding from '../../assets/images/e-commerce-onboarding.png'
+import { onboardingMock } from '../../mocks/onboarding'
 
 import { styles } from './styles'
 
 export const Onboarding = () => {
-  const onboardingOptions = [
-    {
-      image: ecommerceOnboarding,
-      title: 'Cadastre-se de forma simples em nossa loja',
-      text: 'O primeiro passo para ter seus Super Sneakers é concluir seu cadastro em nosso app. É bem simples.'
-    }
-  ]
+  const [currentOnboardingSlide, setCurrentOnboardingSlide] = useState(0)
+
+  const onboardingSlideContent = useMemo(
+    () => onboardingMock[currentOnboardingSlide],
+    [currentOnboardingSlide]
+  )
+
+  const slideQuantity = onboardingMock.length
 
   return (
     <View style={styles.onboardingContainer}>
       <OnboardingBox
-        image={onboardingOptions[0].image}
-        title={onboardingOptions[0].title}
-        text={onboardingOptions[0].text}
+        image={onboardingSlideContent.image}
+        title={onboardingSlideContent.title}
+        text={onboardingSlideContent.text}
+        currentOnboardingSlide={currentOnboardingSlide}
+        slideQuantity={slideQuantity}
+        isLast={currentOnboardingSlide === slideQuantity - 1}
+        nextButtonAction={() =>
+          setCurrentOnboardingSlide(currentOnboardingSlide + 1)
+        }
       />
     </View>
   )

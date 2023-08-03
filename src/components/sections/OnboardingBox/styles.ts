@@ -12,10 +12,10 @@ export const styles = StyleSheet.create({
   onboardingBoxTopSubcontainer: {
     width: '100%',
     display: 'flex',
+    flex: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    paddingTop: 100
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   onboardingBoxTitle: {
     fontFamily: theme.fonts.poppins700,
@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     lineHeight: 38,
     color: theme.colors.rock,
     textAlign: 'center',
-    marginBottom: 16
+    marginBottom: 8
   },
   onboardingBoxText: {
     fontFamily: theme.fonts.poppins400,
@@ -31,12 +31,12 @@ export const styles = StyleSheet.create({
     lineHeight: 20,
     color: theme.colors.rock,
     textAlign: 'center',
-    marginBottom: 24
+    marginBottom: 16
   },
   onboardingBoxImage: {
     width: 250,
     height: 250,
-    marginBottom: 16
+    marginBottom: 8
   },
   onboardingBoxBottomSubcontainer: {
     width: '100%',
@@ -44,13 +44,31 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-end',
     alignItems: 'center',
+    paddingBottom: 8
+  },
+  onboardingBoxSlideDotsContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingBottom: 16
+  },
+  onboardingBoxSlideDots: {
+    width: 8,
+    height: 8,
+    borderRadius: 50,
+    backgroundColor: theme.colors.rock,
+    marginHorizontal: 4
+  },
+  onboardingBoxSlideDotSelected: {
+    width: 20,
+    backgroundColor: theme.colors.splash
   },
   onboardingBoxButtons: {
     width: '100%',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
     paddingTop: 8
   }
